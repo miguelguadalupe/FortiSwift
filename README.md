@@ -1,10 +1,1 @@
-___________               __   .__   _________         .__   _____   __   
-\_   _____/____ _______ _/  |_ |__| /   _____/__  _  __|__|_/ ____\_/  |_ 
- |    __) /  _ \_  __ \   __\|  | \_____  \ \ \/ \/ /|  |\   __\ \   __\ 
- |     \ (  <_> )|  | \/ |  |  |  | /        \ \     / |  | |  |    |  |  
- \___  /  \____/ |__|    |__|  |__|/_______  /  \/\_/  |__| |__|    |__|  
-     \/                                    \/                             
-
-
-
-Is a script allows you to create Fortigate configurations on CLI very fast.
+FortiSwiss is a script allows you to create Fortigate configurations on CLI very fast.
