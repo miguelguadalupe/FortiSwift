@@ -1523,8 +1523,8 @@ while true; do
         3) servicestcp;;
         4) servicesudp;;
         5) IPSECVPN;;
-        6) policylookup;;
-        7) Geo_Configure;;
+        6) Geo_Configure;;
+        7) policylookup;;
         8) Sniffer;;
         9) RouterInfo;;
         10)SessionClear;;
