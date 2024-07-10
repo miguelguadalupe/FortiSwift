@@ -447,6 +447,66 @@ SessionClear () {
 }
 
 
+staticroute () {
+
+
+    clear -x
+
+    read -p "Enter the network: " dstnet
+    read -p "Enter the interface: " device
+
+    output+="config router static"$'\n'
+    output+="edit 0"$'\n'
+    output+="set dst $dstnet"$'\n'
+    output+="set device $device"$'\n'
+    output+="show"$'\n'
+    output+="end"$'\n'
+
+
+    echo
+    # Display the generated configuration
+    echo "======================START OF Configuration======================"
+    echo
+    echo "$output"
+    echo
+    echo "======================END OF Configuration======================"
+
+
+    read -p "Press ENTER to finish "
+
+
+
+
+}
+
+
+
+failover () {
+
+
+    clear -x
+
+    echo "Perform this command on the primary firewall: "
+
+    output+="diag sys ha reset-uptime"$'\n'
+
+
+    echo
+    # Display the generated configuration
+    echo "============================================"
+    echo
+    echo "$output"
+    echo "============================================"
+
+
+    read -p "Press ENTER to finish "
+
+
+
+
+}
+
+
 
 
 Geo_Configure () {
@@ -1504,6 +1564,8 @@ display_menu() {
 \e[97m8) Sniffer Packet\e[0m
 \e[97m9) Router Info\e[0m
 \e[97m10) Clear Session\e[0m
+\e[97m11) Static Route\e[0m
+\e[97m12) Perform Failover\e[0m
 \e[90m--------------------------------------\e[0m
 \e[91mq) Exit\e[0m
 "
@@ -1528,6 +1590,8 @@ while true; do
         8) Sniffer;;
         9) RouterInfo;;
         10)SessionClear;;
+        11)staticroute;;
+        12)failover;;
         q) break;;
         *) clear
            echo "Invalid option. Try again.";;
